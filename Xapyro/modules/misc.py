@@ -6,14 +6,14 @@
 #
 # All rights reserved.
 
-from xapyro import app
+from Xapyro import app
 from config import PREFIX
 
 from pyrogram import filters
 
-from xapyro.database.gmutedb import get_gmuted_users, gmute_user, ungmute_user
-from xapyro.helpers.pyrohelper import get_arg
-from xapyro.helpers.adminhelpers import CheckAdmin
+from Xapyro.database.gmutedb import get_gmuted_users, gmute_user, ungmute_user
+from Xapyro.helpers.pyrohelper import get_arg
+from Xapyro.helpers.adminhelpers import CheckAdmin
 
 
 @app.on_message(filters.command("gmute", PREFIX) & filters.me)
