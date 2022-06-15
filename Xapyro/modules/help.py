@@ -7,9 +7,9 @@
 # All rights reserved.
 
 from pyrogram import filters
-from xapyro import app, HELP, CMD_HELP
+from Xapyro import app, HELP, CMD_HELP
 from config import PREFIX
-from xapyro.helpers.pyrohelper import get_arg
+from Xapyro.helpers.pyrohelper import get_arg
 
 HELP.update(
     {
