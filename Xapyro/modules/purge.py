@@ -12,7 +12,7 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import Message
 from inspect import getfullargspec
-from xapyro import app
+from Xapyro import app
 from config import PREFIX
 
 
