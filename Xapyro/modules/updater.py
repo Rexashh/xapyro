@@ -15,8 +15,8 @@ from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from pyrogram import filters
-from xapyro import app, CMD_HELP
-from xapyro.helpers.pyrohelper import get_arg
+from Xapyro import app, CMD_HELP
+from Xapyro.helpers.pyrohelper import get_arg
 
 CMD_HELP.update(
     {
