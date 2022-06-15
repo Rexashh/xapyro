@@ -10,7 +10,7 @@ from pyrogram import filters
 
 from Xapyro import app, CMD_HELP
 from Xapyro.helpers.pyrohelper import get_arg
-import xapyro.database.notesdb as xapyro
+import Xapyro.database.notesdb as xapyro
 from config import PREFIX, LOG_CHAT
 
 CMD_HELP.update(
