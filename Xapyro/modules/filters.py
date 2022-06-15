@@ -9,10 +9,10 @@
 import re
 
 from pyrogram import filters
-from xapyro import app, CMD_HELP
+from Xapyro import app, CMD_HELP
 from config import PREFIX, LOG_CHAT
-from xapyro.helpers.pyrohelper import get_arg
-from xapyro.database.filtersdb import (
+from Xapyro.helpers.pyrohelper import get_arg
+from Xapyro.database.filtersdb import (
     add_filters,
     all_filters,
     del_filters,
