@@ -12,7 +12,8 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from requests import get                                                                  
-from config import CMD_HANDLER as cmd                                                     
+from config import PREFIX                                                     
+from Xapyro import app,CMD_HELP
 
 CMD_HELP.update(
     {
