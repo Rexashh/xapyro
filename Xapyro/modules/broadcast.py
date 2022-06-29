@@ -14,7 +14,14 @@ from pyrogram.types import Message
 from requests import get                                                                  
 from config import CMD_HANDLER as cmd                                                     
 
-from .help import add_command_help
+CMD_HELP.update(
+    {
+        "Broadcast": """
+『 **Broadcast** 』
+  `gcast` -> Mengirim ke seluruh group.
+"""
+    }
+)
 
 while 0 < 6:                                                                                
   _GCAST_BLACKLIST = get(
