@@ -25,10 +25,11 @@ def get_user(message: Message, text: str) -> [int, str, None]:
                 if required_entity.type == "text_mention":
                     user_s = int(required_entity.user.id)
                 else:
-                    user_s = int(asplit[0]) if asplit[0].isdigit() else asplit[0]                             else:
-            user_s = int(asplit[0]) if asplit[0].isdigit() else asplit[0]
-        if len(asplit) == 2:
-            reason_ = asplit[1]
+                    user_s = int(asplit[0]) if asplit[0].isdigit() else asplit[0]                             
+                else:
+                    user_s = int(asplit[0]) if asplit[0].isdigit() else asplit[0]
+           if len(asplit) == 2:
+               reason_ = asplit[1]
     return user_s, reason_
 
 
