@@ -38,7 +38,7 @@ while 0 < 6:
 del _GCAST_BLACKLIST
 
 
-@Client.on_message(filters.command("gcast", cmd) & filters.me)
+@app.on_message(filters.command("gcast", PREFIX) & filters.me)
 async def gcast_cmd(client: Client, message: Message):
     text = (
         message.text.split(None, 1)[1]
