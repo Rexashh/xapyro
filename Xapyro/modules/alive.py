@@ -27,10 +27,10 @@ emoji = ALIVE_EMOJI
 alive_text = ALIVE_TEKS_CUSTOM
 
 @app.on_message(filters.command("alive", PREFIX) & filters.me)
-async def alive(client: Client, message: Message):
+async def alive(app: App,message: Message):
     xx = await edit_or_reply(message, "⚡")
     await asyncio.sleep(2)
-    apa = client.send_video if ALIVE_LOGO.endswith(".mp4") else client.send_photo
+    apa = app.send_video if ALIVE_LOGO.endswith(".mp4") else app.send_photo
     uptime = await get_readable_time((time.time() - StartTime))
     capt = (
         f"**[xapyro-userbot](https:/t.me/rexaprivateroom) is Up and Running.**\n\n"
