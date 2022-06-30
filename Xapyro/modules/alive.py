@@ -63,12 +63,13 @@ def get_readable_time(seconds: int) -> str:
 async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
-    reply_msg = f"**[XaPyro](https://github.com/Rexashh/xapyro)**\n"
-    reply_msg += f"__Python__: `{__python_version__}`\n"
-    reply_msg += f"__@Pyrogram version__: `{__pyro_version__}`\n"
+    reply_msg = f"Im Alive ⚡\n"
+    reply_msg = f"⚡ **[xapyro-userbot](https://xvideos.com)**\n"
+    reply_msg += f"⚡ __Python__: `{__python_version__}`\n"
+    reply_msg += f"⚡ __@Pyrogram version__: `{__pyro_version__}`\n"
     end_time = time.time()
-    reply_msg += f"__Xapyro uptime__: {uptime}"
-    photo = "https://telegra.ph//file/dcd069c3eb26c9fa3011d.jpg"
+    reply_msg += f"⚡ __Xapyro uptime__: {uptime}"
+    photo = "https://telegra.ph/file/597478969e129d39ebb0e.jpg"
     await m.delete()
     if m.reply_to_message:
         await app.send_photo(
@@ -87,4 +88,7 @@ async def pingme(_, message: Message):
     await message.edit("`Pong!`")
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await message.edit(f"**Pong!**\n`{m_s} ms`")
+    await message.edit(f" **⚡**")
+    await message.edit(f" **⚡⚡**")
+    await message.edit(f" **⚡⚡⚡**")
+    await message.edit(f"🏓 **Pong!**\n`{m_s} ms`")
