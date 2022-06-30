@@ -49,7 +49,7 @@ async def gcast_cmd(client: Client, message: Message):
                     await client.send_message(chat, text)
                     await asyncio.sleep(0.1)
                     done += 1                                                                     
-             except FloodWait as e:
+                except FloodWait as e:
                     await asyncio.sleep(e.value)
                     await client.send_message(chat, text)
                     done += 1
