@@ -26,7 +26,7 @@ modules = PREFIX
 emoji = ALIVE_EMOJI
 alive_text = ALIVE_TEKS_CUSTOM
 
-@Client.on_message(filters.command(["alive", "awake"], cmd) & filters.me)
+@app.on_message(filters.command("alive", PREFIX) & filters.me)
 async def alive(client: Client, message: Message):
     xx = await edit_or_reply(message, "⚡")
     await asyncio.sleep(2)
