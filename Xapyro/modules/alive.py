@@ -27,7 +27,7 @@ emoji = ALIVE_EMOJI
 alive_text = ALIVE_TEKS_CUSTOM
 
 @app.on_message(filters.command("alive", PREFIX) & filters.me)
-async def alive(app: Client, message: Message):
+async def alive(_, m):
     xx = await edit_or_reply(message, "⚡")
     await asyncio.sleep(2)
     apa = app.send_video if ALIVE_LOGO.endswith(".mp4") else app.send_photo
