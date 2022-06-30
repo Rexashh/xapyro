@@ -20,6 +20,7 @@ CMD_HELP.update(
         "Broadcast": """
 『 **Broadcast** 』
   `gcast` -> Mengirim ke seluruh group.
+  `gucast` -> Mengirim ke seluruh Chat
 """
     }
 )
@@ -107,19 +108,3 @@ async def gucast_cmd(client: Client, message: Message):
     await Man.edit_text(
         f"**Berhasil Mengirim Pesan Ke** `{done}` **chat, Gagal Mengirim Pesan Ke** `{error}` **chat**"
     )
-
-
-add_command_help(
-    "broadcast",
-    [
-        [
-            f"{cmd}gcast <text/reply>",
-            "Mengirim Global Broadcast pesan ke Seluruh Grup yang kamu masuk.",
-        ],
-        [
-            f"{cmd}gucast <text/reply>",
-            "Mengirim Global Broadcast pesan ke Seluruh Private Massage / PC yang masuk.",
-        ],
-    ],
-)
-
