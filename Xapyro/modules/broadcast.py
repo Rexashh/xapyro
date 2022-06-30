@@ -20,7 +20,6 @@ CMD_HELP.update(
         "Broadcast": """
 『 **Broadcast** 』
   `gcast` -> Mengirim ke seluruh group.
-  `gucast` -> Mengirim ke seluruh Chat
 """
     }
 )
@@ -72,39 +71,4 @@ async def gcast_cmd(client: Client, message: Message):
                     error += 1
     await Man.edit_text(
         f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{error}` **Grup**"
-    )
-
-
-@Client.on_message(filters.command("gucast", cmd) & filters.me)
-async def gucast_cmd(client: Client, message: Message):
-    text = (
-        message.text.split(None, 1)[1]
-        if len(
-            message.command,
-        )
-        != 1
-        else None
-    )
-    if message.reply_to_message:
-        text = message.reply_to_message.text or message.reply_to_message.caption
-    if not text:
-        return await edit_or_reply(message, "**Berikan Sebuah Pesan atau Reply**")
-    Man = await edit_or_reply(message, "`Started global broadcast to users...`")
-    done = 0
-    error = 0
-    async for dialog in client.iter_dialogs():
-        if dialog.chat.type == "private" and not dialog.chat.is_verified:
-            chat = dialog.chat.id                                                                                                                                                               if chat not in DEVS:
-                try:
-                    await client.send_message(chat, text)
-                    await asyncio.sleep(0.1)
-                    done += 1
-                except FloodWait as e:
-                    await asyncio.sleep(e.value)
-                    await client.send_message(chat, text)
-                    done += 1
-                except Exception:
-                    error += 1
-    await Man.edit_text(
-        f"**Berhasil Mengirim Pesan Ke** `{done}` **chat, Gagal Mengirim Pesan Ke** `{error}` **chat**"
     )
