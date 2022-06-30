@@ -14,5 +14,5 @@ from Xapyro.modules import *
 
 app.start()
 me = app.get_me()
-print(f"Xapyro UserBot started for user {me.id}. Type {PREFIX}help in any telegram chat.")
+print(f"⚡Xapyro UserBot Berhasil diaktifkan oleh {me.id}. Ketik {PREFIX}help di chat untuk melihat bantuan modules.")
 idle()
