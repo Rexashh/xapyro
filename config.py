@@ -8,9 +8,8 @@ PREFIX = os.getenv("PREFIX")
 LOG_CHAT = int(os.getenv("LOG_CHAT"))
 HEROKU_API = os.getenv("HEROKU_API")
 HEROKU_APP_NAME = os.getenv("HEROKU_APP_NAME")
-ALIVE_EMOJI = os.getenv("⚡")
-ALIVE_LOGO = os.getenv("https://telegra.ph/file/597478969e129d39ebb0e.jpg") 
-ALIVE_TEKS_CUSTOM = os.getenv("Im alive")
-BOT_VER = os.getenv("0.1betatest")
-CHANNEL = os.getenv("CHANNEL","tirexgugel")
-GROUP = os.getenv("GROUP","rexaprivateroom")
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
