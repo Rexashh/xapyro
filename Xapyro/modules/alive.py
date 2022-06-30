@@ -65,10 +65,10 @@ async def alive(_, m):
     uptime = get_readable_time((time.time() - StartTime))
     reply_msg = f"Im Alive ⚡\n"
     reply_msg = f"⚡ **[xapyro-userbot](https://xvideos.com)**\n"
-    reply_msg += f"⚡ __Python__: `{__python_version__}`\n"
-    reply_msg += f"⚡ __@Pyrogram version__: `{__pyro_version__}`\n"
+    reply_msg += f"⚡ ᴘʏᴛʜᴏɴ ᴠᴇʀ   **: `{__python_version__}`\n"
+    reply_msg += f"⚡ ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀ **: `{__pyro_version__}`\n"
     end_time = time.time()
-    reply_msg += f"⚡ __Xapyro uptime__: {uptime}"
+    reply_msg += f"⚡ ᴜᴘᴛɪᴍᴇ      **: {uptime}"
     photo = "https://telegra.ph/file/597478969e129d39ebb0e.jpg"
     await m.delete()
     if m.reply_to_message:
