@@ -10,13 +10,13 @@ import time
 from pyrogram import filters
 import asyncio
 
-from xapyro import app, CMD_HELP
+from Xayro import app, CMD_HELP
 from config import PREFIX, LOG_CHAT
-from xapyro.helpers.pyrohelper import get_arg
-import xapyro.database.afkdb as xapyro
-from xapyro.helpers.pyrohelper import user_afk
-from xapyro.modules.alive import get_readable_time
-from xapyro.helpers.utils import get_message_type, Types
+from Xapyro.helpers.pyrohelper import get_arg
+import Xapyro.database.afkdb as xapyro
+from Xapyro.helpers.pyrohelper import user_afk
+from Xapyro.modules.alive import get_readable_time
+from Xapyro.helpers.utils import get_message_type, Types
 
 CMD_HELP.update(
     {
