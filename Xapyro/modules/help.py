@@ -16,6 +16,7 @@ HELP.update(
         "**Admin Tools**": "__ban, unban, promote, demote, kick, mute, unmute, gmute, ungmute, pin, purge, del, invite__",
         "**AFK**": "__afk, unafk__",
         "**Alive**": "__alive, ping__",
+        "**Broadcast**" : "__gcast__",
         "**Developer**": "__eval, term__",
         "**Filters**": "__filter, filters, stop, stopall__",
         "**Misc**": "__paste, tr, whois, id__",
