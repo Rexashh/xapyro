@@ -1,7 +1,12 @@
+# Copyright (C) 2020-2021 by okay-retard@Github, < https://github.com/okay-retard >.
+#
+# This file is part of < https://github.com/okay-retard/XapyroUserBot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/okay-retard/XapyroUserBot/blob/master/LICENSE >
+#
+# All rights reserved.
 
 from config import PREFIX
-from config import ALIVE_EMOJI, ALIVE_LOGO, ALIVE_TEKS_CUSTOM, BOT_VER, CHANNEL, GROUP
-from Xapyro.helpers.basic import edit_or_reply
 import asyncio
 import time
 from datetime import datetime
@@ -53,35 +58,37 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-modules = PREFIX
-emoji = ALIVE_EMOJI
-alive_text = ALIVE_TEKS_CUSTOM
 
 @app.on_message(filters.command("alive", PREFIX) & filters.me)
 async def alive(_, m):
-    xx = await edit_or_reply(message, "⚡")
-    await asyncio.sleep(2)
-    apa = app.send_video if ALIVE_LOGO.endswith(".mp4") else app.send_photo
-    uptime = await get_readable_time((time.time() - StartTime))
-    capt = (
-        f"**[xapyro-userbot](https:/t.me/rexaprivateroom) is Up and Running.**\n\n"
-        f"<b>{alive_text}</b>\n\n"
-        f"{emoji} <b>Master :</b> {client.me.mention} \n"
-        f"{emoji} <b>Modules :</b> <code>{len(modules)} Modules</code> \n"
-        f"{emoji} <b>Bot Version :</b> <code>{BOT_VER}</code> \n"
-        f"{emoji} <b>Python Version :</b> <code>{python_version()}</code> \n"
-        f"{emoji} <b>Pyrogram Version :</b> <code>{versipyro}</code> \n"
-        f"{emoji} <b>Bot Uptime :</b> <code>{uptime}</code> \n\n"
-        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/{GROUP})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/{CHANNEL})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={client.me.id})**"
-    )
-    photo = ALIVE_LOGO
+    start_time = time.time()
+    uptime = get_readable_time((time.time() - StartTime))
+    reply_msg = f"Im Alive ⚡\n"
+    reply_msg += f"⚡ **[xapyro-userbot](https://xvideos.com)**\n"
+    reply_msg += f"⚡ ᴘʏᴛʜᴏɴ ᴠᴇʀ   **: `{__python_version__}`\n"
+    reply_msg += f"⚡ ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀ **: `{__pyro_version__}`\n"
+    end_time = time.time()
+    reply_msg += f"⚡ ᴜᴘᴛɪᴍᴇ      **: {uptime}"
+    photo = "https://telegra.ph/file/597478969e129d39ebb0e.jpg"
     await m.delete()
     if m.reply_to_message:
         await app.send_photo(
             m.chat.id,
-            photo= ALIVE_LOGO,
+            photo,
             caption=reply_msg,
             reply_to_message_id=m.reply_to_message.message_id,
         )
     else:
         await app.send_photo(m.chat.id, photo, caption=reply_msg)
+
+
+@app.on_message(filters.command("ping", PREFIX) & filters.me)
+async def pingme(_, message: Message):
+    start = datetime.now()
+    await message.edit("`Pong!`")
+    end = datetime.now()
+    m_s = (end - start).microseconds / 1000
+    await message.edit(f" **⚡**")
+    await message.edit(f" **⚡⚡**")
+    await message.edit(f" **⚡⚡⚡**")
+    await message.edit(f"🏓 **Pong!**\n`{m_s} ms`")
