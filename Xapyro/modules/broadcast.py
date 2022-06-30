@@ -24,21 +24,6 @@ CMD_HELP.update(
     }
 )
 
-while 0 < 6:                                                                                
-  _GCAST_BLACKLIST = get(
-        "https://raw.githubusercontent.com/mrismanaziz/Reforestation/master/blacklistgcast> 
-   )
-    if _GCAST_BLACKLIST.status_code != 200:
-        if 0 != 5:
-            continue
-        GCAST_BLACKLIST = [-1001473548283, -1001390552926]
-        break
-    GCAST_BLACKLIST = _GCAST_BLACKLIST.json()                               
-         break
-
-del _GCAST_BLACKLIST
-
-
 @Client.on_message(filters.command("gcast", cmd) & filters.me)
 async def gcast_cmd(client: Client, message: Message):
     text = (
