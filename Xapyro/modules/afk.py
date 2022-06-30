@@ -10,7 +10,7 @@ import time
 from pyrogram import filters
 import asyncio
 
-from Xayro import app, CMD_HELP
+from Xapyro import app, CMD_HELP
 from config import PREFIX, LOG_CHAT
 from Xapyro.helpers.pyrohelper import get_arg
 import Xapyro.database.afkdb as xapyro
