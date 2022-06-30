@@ -64,7 +64,7 @@ async def alive(_, m):
     start_time = time.time()
     uptime = get_readable_time((time.time() - StartTime))
     reply_msg = f"Im Alive ⚡\n"
-    reply_msg = f"⚡ **[xapyro-userbot](https://xvideos.com)**\n"
+    reply_msg += f"⚡ **[xapyro-userbot](https://xvideos.com)**\n"
     reply_msg += f"⚡ ᴘʏᴛʜᴏɴ ᴠᴇʀ   **: `{__python_version__}`\n"
     reply_msg += f"⚡ ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀ **: `{__pyro_version__}`\n"
     end_time = time.time()
