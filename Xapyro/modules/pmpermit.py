@@ -12,7 +12,7 @@ import asyncio
 from pyrogram.methods import messages
 from Xapyro import app, CMD_HELP
 from Xapyro.helpers.pyrohelper import get_arg, denied_users
-import xapyro.database.pmpermitdb as xapyrodb
+import Xapyro.database.pmpermitdb as xapyrodb
 from config import PREFIX
 
 CMD_HELP.update(
