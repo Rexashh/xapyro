@@ -10,7 +10,7 @@ from pyrogram.types import Message, User
 from pyrogram import Client
 from Xapyro.database.afkdb import get_afk_status
 from Xapyro.database.pmpermitdb import get_approved_users, pm_guard
-import xapyro.database.welcomedb as xapyrodb
+import Xapyro.database.welcomedb as xapyrodb
 import shlex
 
 
