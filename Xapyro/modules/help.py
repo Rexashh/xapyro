@@ -35,7 +35,7 @@ async def help(client, message):
     if not args:
         text = "**Perintah yang tersedia**\n\n"
         for key, value in HELP.items():
-            text += f"{key}: {value}\n\n"
+            text += f"•{key}:\n{value}\n\n"
         await message.edit(text)
         return
     else:
