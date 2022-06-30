@@ -14,6 +14,7 @@ from pyrogram.types import Message
 from requests import get                                                                  
 from config import PREFIX                                                     
 from Xapyro import app, CMD_HELP
+from Xapyro.helpers.basic import edit_or_reply
 
 CMD_HELP.update(
     {
